@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body  style="margin-left: 100px ; margin-top: 100px; background-color: pink; ">
+
+
+		<h1 style="align= right">
+			<a href='/'> home page</a>
+		</h1>
+
+
+		<p></p>
+		<h1 style="margin-left: 500px;align=center"> Keep your self updated </h1>
+		<p></p>
+
+		<p></p>
+		<h1 style="margin-left: 500px;align=center "> with the latest News </h1>
+		<p></p>
+
+		<br></br>
+
+		<p></p>
+		<!-- https://www.grantaguinaldo.com/rendering-variables-python-flask/ -->
+		{% for i in newsData %}
+		<p style="margin-top: 100px;">
+		<img src={{ i["urlToImage"] }}
+				 alt="image can't load!!"
+				 align="left"
+				 width="320"
+				 height="240"
+				 HSPACE="50"/>
+			<h1>{{ i["title"] }}</h1>
+			<h3>{{ i["description"] }}</h3>
+			<h2>
+			<a href={{ i["url"] }}>details</a>
+			</h2>
+			<BR CLEAR=”left” />
+
+
+		</p>
+
+		{% endfor %}
+		<p></p>
+
+		<!-- Embed video from internal path; must be in static folder -->
+		<video width="640" height="480" controls autoplay>
+			<source src="{{url_for('static', filename='videos/file_example.mp4')}}"
+					alt="vid can't load!!"
+					align="middle"
+					type=video/mp4>
+    	</video>
+
+		<!-- Embed video from external url, for youtube we need the embed link -->
+		<iframe src="https://www.youtube.com/embed/AqQ1TYEkb8s"
+				width="640"
+				height="480"
+				frameborder="0"
+				allowfullscreen>
+		</iframe>
+
+		<p></p>
+			<img src="{{url_for('static', filename='images/Sample.jpg')}}"
+				 alt="image can't load!!"
+				 align="middle"
+				 width="640"
+				 height="480"/>
+		<p></p>
+
+
+	</body>
+</html>
