@@ -1,3 +1,4 @@
+# HELLO ABU SIMPLE
 from flask import Flask, render_template, request
 from DB import dbFunktions
 import requests
