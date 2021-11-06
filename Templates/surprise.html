@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head></head>
-	<body  style="margin-left: 100px ; margin-top: 100px; background-color: pink; ">
+	<body  style="margin-left: 200px ; margin-top: 50px;margin-bottom: 50px; background-color: pink; ">
 
+		<p></p>
+		<h1 style="margin-left: 500px;align=center; margin-bottom: 50px"> Enjoy your time <3 </h1>
+		<p></p>
 
-		<h1 style="align= right">
+		<!--<h1 style="align= right">
 			<a href='/'> home page</a>
-		</h1>
+		</h1>-->
 
 
-		<p></p>
-		<h1 style="margin-left: 500px;align=center"> Keep your self updated </h1>
-		<p></p>
 
-		<p></p>
-		<h1 style="margin-left: 500px;align=center "> with the latest News </h1>
-		<p></p>
 
-		<br></br>
 
-		<p></p>
 		<!-- https://www.grantaguinaldo.com/rendering-variables-python-flask/ -->
-		{% for i in newsData %}
+		<!--{% for i in newsData %}
 		<p style="margin-top: 100px;">
-		<img src={{ i["urlToImage"] }}
+		<img src='{{ i["urlToImage"] }}'
 				 alt="image can't load!!"
 				 align="left"
 				 width="320"
@@ -32,39 +27,48 @@
 			<h1>{{ i["title"] }}</h1>
 			<h3>{{ i["description"] }}</h3>
 			<h2>
-			<a href={{ i["url"] }}>details</a>
+			<a href='{{ i["url"] }}'>details</a>
 			</h2>
-			<BR CLEAR=”left” />
+			<BR CLEAR=”left” >
 
-
-		</p>
-
-		{% endfor %}
 		<p></p>
 
+		{% endfor %}
+		<p></p>-->
+
 		<!-- Embed video from internal path; must be in static folder -->
-		<video width="640" height="480" controls autoplay>
+		<!--<video
+				width="640" height="480" controls autoplay
+				alt="vid can't load!!"
+				align="middle">
 			<source src="{{url_for('static', filename='videos/file_example.mp4')}}"
-					alt="vid can't load!!"
-					align="middle"
 					type=video/mp4>
-    	</video>
+    	</video>-->
 
 		<!-- Embed video from external url, for youtube we need the embed link -->
-		<iframe src="https://www.youtube.com/embed/AqQ1TYEkb8s"
+		<!--<iframe src="https://www.youtube.com/embed/AqQ1TYEkb8s"
 				width="640"
 				height="480"
 				frameborder="0"
 				allowfullscreen>
-		</iframe>
+		</iframe>-->
 
-		<p></p>
+		<iframe style= "align=center"
+				width="1120"
+				height="630"
+				src="https://www.youtube.com/embed/ZVJ3Ho83Ksg"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+		<!--<p></p>
 			<img src="{{url_for('static', filename='images/Sample.jpg')}}"
 				 alt="image can't load!!"
 				 align="middle"
 				 width="640"
 				 height="480"/>
-		<p></p>
+		<p></p>-->
 
 
 	</body>

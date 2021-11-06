@@ -1,4 +1,6 @@
 # HELLO ABU SIMPLE
+####################
+####################
 from flask import Flask, render_template, request
 from DB import dbFunktions
 import requests
@@ -71,27 +73,27 @@ def surprise():
         else:
             # get info from the url
             # response = requests.get("http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=ea929f344245355cfd475337fc8f93f4")
-            response = requests.get(
-                "https://newsapi.org/v2/everything?q=tesla&from=2021-09-28&sortBy=publishedAt&apiKey=73f6bd3be78e46bf98ec0f11f15717a7")
-            # url=https://newsapi.org/
-            # url = r"https://api.nytimes.com/svc/topstories/v2/world.json?"
-
-            # params = {"api-key": "73f6bd3be78e46bf98ec0f11f15717a7"}
-            # response = requests.get(url=url, params=params)
-            response.status_code
-            data = response.json()
-            print(data)
-            newsData = data["articles"]
-            #for i in range(len(data["articles"])):
-                #print(data["articles"][i]["title"])
-                #print(data["articles"][i]["description"])
-                #print(data["articles"][i]["url"])
-                #print(data["articles"][i]["urlToImage"])
-
-            print(data["main"]["temp"])
-            # print(response.status_code)
-            # print("here")
-            return render_template("surprise.html", newsData=newsData)
+            # response = requests.get(
+            #     "https://newsapi.org/v2/everything?q=tesla&from=2021-09-28&sortBy=publishedAt&apiKey=73f6bd3be78e46bf98ec0f11f15717a7")
+            # # url=https://newsapi.org/
+            # # url = r"https://api.nytimes.com/svc/topstories/v2/world.json?"
+            #
+            # # params = {"api-key": "73f6bd3be78e46bf98ec0f11f15717a7"}
+            # # response = requests.get(url=url, params=params)
+            # response.status_code
+            # data = response.json()
+            # print(data)
+            # newsData = data["articles"]
+            # #for i in range(len(data["articles"])):
+            #     #print(data["articles"][i]["title"])
+            #     #print(data["articles"][i]["description"])
+            #     #print(data["articles"][i]["url"])
+            #     #print(data["articles"][i]["urlToImage"])
+            #
+            # print(data["main"]["temp"])
+            # # print(response.status_code)
+            # # print("here")
+            return render_template("surprise.html")#, newsData=newsData)
 
 
 
